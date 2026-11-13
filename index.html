@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>discord.gg/EHZTXduFm2</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('https://cdn.discordapp.com/attachments/1522547007384719370/1570432820378075227/image.png?ex=6af7bbc9&is=6af66a49&hm=552e6a98d9a7b178e565ee7c4cdcafccf3ae6876191aec8226c21b62966d3d4d&') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Courier New', Courier, monospace;
+            color: #030303;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+        }
+        .image-container img {
+            width: 750px;
+            height: auto;
+            border: 2px solid #000000;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgb(4, 0, 255);
+        }
+        .info {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #0400f5;
+            text-shadow: 0px 0px 8px #004ff8, 0px 0px 15px #000000, 0px 0px 25px #000000;
+            letter-spacing: 4.5px;
+            white-space: pre-wrap;
+        }
+        .text {
+            margin-top: 20px;
+            font-size: 3em;
+            color: #1100ff;
+            text-shadow: 0px 0px 8px #000000, 0px 0px 15px #000000, 0px 0px 25px #000000;
+            letter-spacing: 4.5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="image.png" alt="Adolf Image" />
+    </div>
+    <audio autoplay loop>
+        <source src="c:\Users\SHAHROR PC\Downloads\aa.mp3.mov" type="audio/mpeg" />
+        متصفحك لا يدعم عنصر الصوت.
+    </audio>
+    <div class="text"> welcome to Adolf </div>
+    <div class="info" id="ip-info">
+        <strong>IP: <span id="ip"></span></strong><br />
+        <span><strong>City:</strong> <span id="city"></span></span><br />
+        <span><strong>Region:</strong> <span id="region"></span></span><br />
+        <span><strong>Country:</strong> <span id="country"></span></span><br />
+        <span><strong>Location:</strong> <span id="loc"></span></span><br />
+        <span><strong>Organization:</strong> <span id="org"></span></span><br />
+        <span><strong>Timezone:</strong> <span id="timezone"></span></span>
+    </div>
+    <div class="text">: المسلحين : https://discord.gg/adf</div>
+
+    <script>
+        fetch('https://ipinfo.io/json')
+            .then(response => response.json())
+            .then(data => {
+                const infoDiv = document.getElementById('ip-info');
+                document.getElementById('ip').textContent = data.ip || '';
+                document.getElementById('city').textContent = data.city || '';
+                document.getElementById('region').textContent = data.region || '';
+                document.getElementById('country').textContent = data.country || '';
+                document.getElementById('loc').textContent = data.loc || '';
+                document.getElementById('org').textContent = data.org || '';
+                document.getElementById('timezone').textContent = data.timezone || '';
+            });
+    </script>
+</body>
+</html>
